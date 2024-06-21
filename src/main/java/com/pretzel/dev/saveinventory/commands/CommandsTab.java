@@ -12,7 +12,7 @@ public class CommandsTab implements TabCompleter {
     public List<String> onTabComplete(final CommandSender sender, final Command command, final String alias, final String[] args) {
         final List<String> cmdlist = new ArrayList<String>();
         if (args.length == 1) {
-        	if (sender.hasPermission("saveinventory.reload")) {
+            if (sender.hasPermission("saveinventory.reload")) {
                 cmdlist.add("reload");
             }
             if (sender.hasPermission("saveinventory.backup")) {
@@ -22,7 +22,7 @@ public class CommandsTab implements TabCompleter {
                 cmdlist.add("restore");
             }
             if (sender.hasPermission("saveinventory.clear")) {
-            	cmdlist.add("clear");
+                cmdlist.add("clear");
             }
         } else {
             return null;
